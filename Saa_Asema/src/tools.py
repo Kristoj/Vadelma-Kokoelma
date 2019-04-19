@@ -69,7 +69,7 @@ def readData():
 	y = time.strftime("%Y")
 	m = time.strftime("%m")
 	d = time.strftime("%d")
-	filename = '/home/pi/dev/projects/Vadelma-Kokoelma/Saa_Asema/data/'+str(y)+str(m)+str(d)'.txt'
+	filename = '/home/pi/dev/projects/Vadelma-Kokoelma/Saa_Asema/data/'+str(y)+str(m)+str(d)+'.txt'
 	h = time.strftime("%H")
 	M = time.strftime("%M")
 	f = open(filename, 'a+')
