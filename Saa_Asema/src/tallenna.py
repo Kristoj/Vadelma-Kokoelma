@@ -21,6 +21,7 @@ for ii in range(10):
 	ax3.plot(h)
 	ax3.set_title('Humidity')
 	
+	fig.tight_layout()
 	plt.draw()
 	
 	plt.pause(1)
