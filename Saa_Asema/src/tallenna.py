@@ -7,8 +7,8 @@ for ii in range(100):
 	with open('temperatures.txt', 'r') as f:
 		t = f.readlines()
 		
-	fig,(ax1,ax2,ax3) = plt.subplots(ncols=1,nrows=3)
-	ax1.plot(t)
-	ax1.set_title('Temperature')
+	#fig,(ax1,ax2,ax3) = plt.subplots(ncols=1,nrows=3)
+	#ax1.plot(t)
+	#ax1.set_title('Temperature')
 	
 	
