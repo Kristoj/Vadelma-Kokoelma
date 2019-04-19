@@ -11,7 +11,8 @@ for ii in range(10):
 	
 	ax1.plot(t)
 	ax1.set_title('Temperature')
-	plt.show(block=False)
+	#plt.show(block=False)
+	plt.draw()
 	
 	time.sleep(1)
 	
