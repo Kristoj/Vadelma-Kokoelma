@@ -93,7 +93,7 @@ def compensate_P(adc_P):
 	pressure = pressure + ((v1 + v2 + digP[6]) / 16.0)  
 
 	with open('pressures.txt', 'w') as output:
-		output.write(pressure/100)
+		output.write(str(pressure/100))
         
 	print "pressure : %7.2f hPa" % (pressure/100)
 
@@ -105,7 +105,7 @@ def compensate_T(adc_T):
 	temperature = t_fine / 5120.0
 	
 	with open('temperatures.txt', 'w') as output:
-		output.write(temperature)
+		output.write(str(temperature))
 
 	print "temp : %-6.2f ℃" % (temperature) 
 
@@ -123,7 +123,7 @@ def compensate_H(adc_H):
 		var_h = 0.0
 	
 	with open('humidities.txt', 'w') as output:
-		output.write(var_h)
+		output.write(str(var_h))
 
 	print "hum : %6.2f ％" % (var_h)
 
