@@ -9,12 +9,19 @@ for ii in range(10):
 	bme280_sample.readData()
 	with open('temperatures.txt', 'r') as f:
 		t = f.readlines()
+	with open('pressures.txt', 'r') as f:
+		p = f.readlines()
+	with open('humidities.txt', 'r') as f:
+		h = f.readlines()
 	
 	ax1.plot(t)
 	ax1.set_title('Temperature')
-	#plt.show(block=False)
+	ax2.plot(p)
+	ax2.set_title('Pressure')
+	ax3.plot(h)
+	ax3.set_title('Humidity')
+	
 	plt.draw()
 	
 	plt.pause(1)
-	#time.sleep(1)
 	
