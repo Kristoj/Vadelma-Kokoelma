@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 for ii in range(100):
 	bme280_sample.readData()
-	with open('file_name.ext', 'r') as f:
+	with open('temperatures.txt', 'r') as f:
 		t = f.readlines()
 		
 	fig,(ax1,ax2,ax3) = plt.subplots(ncols=1,nrows=3)
