@@ -1,3 +1,5 @@
-import bme280_sample
+import tools
+import time
 while(True):
-	bme280_sample.readData()
+	tools.readData()
+	time.sleep(1)
