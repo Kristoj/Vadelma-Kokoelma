@@ -92,7 +92,7 @@ def compensate_P(adc_P):
 	v2 = ((pressure / 4.0) * digP[7]) / 8192.0
 	pressure = pressure + ((v1 + v2 + digP[6]) / 16.0)  
 
-	f = open('pressures.txt', 'a+')
+	f = open('~/dev/projects/Vadelma-Kokoelma/Saa-asema/src/pressures.txt', 'a+')
 	f.write(str(pressure/100)+'\n')
 	f.close()
         
@@ -105,7 +105,7 @@ def compensate_T(adc_T):
 	t_fine = v1 + v2
 	temperature = t_fine / 5120.0
 	
-	f = open('temperatures.txt', 'a+')
+	f = open('~/dev/projects/Vadelma-Kokoelma/Saa-asema/src/temperatures.txt', 'a+')
 	f.write(str(temperature)+'\n')
 	f.close()
 
@@ -124,7 +124,7 @@ def compensate_H(adc_H):
 	elif var_h < 0.0:
 		var_h = 0.0
 	
-	f = open('humidities.txt', 'a+')
+	f = open('~/dev/projects/Vadelma-Kokoelma/Saa-asema/src/humidities.txt', 'a+')
 	f.write(str(var_h)+'\n')
 
 	print "hum : %6.2f ％" % (var_h)
