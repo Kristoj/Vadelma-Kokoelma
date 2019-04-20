@@ -5,7 +5,7 @@ import time
 
 plt.ion()
 fig,(ax1,ax2,ax3) = plt.subplots(ncols=1,nrows=3)
-for ii in range(10):
+for ii in range(100):
 	bme280_sample.readData()
 	with open('/home/pi/dev/projects/Vadelma-Kokoelma/Saa_Asema/data/temperatures.txt', 'r') as f:
 		t = f.readlines()
@@ -24,5 +24,5 @@ for ii in range(10):
 	fig.tight_layout()
 	plt.draw()
 	
-	plt.pause(1)
+	plt.pause(0.1)
 	
