@@ -77,6 +77,7 @@ def readData():
 	f.write(str(M)+'\t')
 	f.close()
 	
+	print(time.asctime( time.localtime(time.time()) ))
 	compensate_T(temp_raw, filename)
 	compensate_P(pres_raw, filename)
 	compensate_H(hum_raw, filename)
@@ -92,7 +93,7 @@ def compensate_T(adc_T, filename):
 	f.write(str(temperature)+'\t')
 	f.close()
 
-	print "temp : %-6.2f ℃" % (temperature) 
+	print("temp : %-6.2f ℃" % (temperature) )
 
 def compensate_P(adc_P, filename):
 	global  t_fine
@@ -120,7 +121,7 @@ def compensate_P(adc_P, filename):
 	f.write(str(pressure/100)+'\t')
 	f.close()
         
-	print "pressure : %7.2f hPa" % (pressure/100)
+	print("pressure : %7.2f hPa" % (pressure/100))
 
 def compensate_H(adc_H, filename):
 	global t_fine
@@ -138,7 +139,7 @@ def compensate_H(adc_H, filename):
 	f = open(filename, 'a+')
 	f.write(str(var_h)+'\n')
 
-	print "hum : %6.2f ％" % (var_h)
+	print("hum : %6.2f ％" % (var_h))
 
 
 def setup():
